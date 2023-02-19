@@ -1,11 +1,13 @@
-.speedDial {
-  position: fixed;
-  right: 3vmax;
-  top: 3vmax;
+.inputBox > span{
+  font-family: "Roboto";
+  animation: sliding 14s linear infinite;
+  display: block;
 }
-
-.speedDialIcon {
-  width: 56px;
-  height: 56px;
-  border-radius: 100%;
+@keyframes sliding{
+  0%{
+    transform: translateX(-70%);
+  }
+  100%{
+    transform: translateX(130%);
+  }
 }
