@@ -75,7 +75,7 @@ function App() {
 
         <Route exact path="/about" component={About} />
 
-        <ProtectedRoute exact path="/account" component={Profile} />
+        <Route exact path="/account" component={Profile} />
 
         <ProtectedRoute exact path="/me/update" component={UpdateProfile} />
 

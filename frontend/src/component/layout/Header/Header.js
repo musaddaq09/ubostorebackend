@@ -1,42 +1,50 @@
-import React from "react";
-import { ReactNavbar } from "overlay-navbar";
+import React from 'react'
 import logo from "../../../images/logo.png";
-
-const options = {
-  burgerColorHover: "#eb4034",
-  logo,
-  logoWidth: "20vmax",
-  navColor1: "white",
-  logoHoverSize: "10px",
-  logoHoverColor: "#eb4034",
-  link1Text: "Home",
-  link2Text: "Products",
-  link3Text: "Contact",
-  link4Text: "About",
-  link1Url: "/",
-  link2Url: "/products",
-  link3Url: "/contact",
-  link4Url: "/about",
-  link1Size: "1.3vmax",
-  link1Color: "rgba(35, 35, 35,0.8)",
-  nav1justifyContent: "flex-end",
-  nav2justifyContent: "flex-end",
-  nav3justifyContent: "flex-start",
-  nav4justifyContent: "flex-start",
-  link1ColorHover: "#eb4034",
-  link1Margin: "1vmax",
-  profileIconUrl: "/login",
-  profileIconColor: "rgba(35, 35, 35,0.8)",
-  searchIconColor: "rgba(35, 35, 35,0.8)",
-  cartIconColor: "rgba(35, 35, 35,0.8)",
-  profileIconColorHover: "#eb4034",
-  searchIconColorHover: "#eb4034",
-  cartIconColorHover: "#eb4034",
-  cartIconMargin: "1vmax",
-};
+import { Link } from "react-router-dom"
+import {FaCartPlus} from "react-icons/fa"
 
 const Header = () => {
-  return <ReactNavbar {...options} />;
-};
+  return (
+    <div className='main'>
+      <div className='first'>
+        <img className='logo' src={logo} alt="logo"/>
+        <Link to="/search"> <input className='search' type="text" placeholder='search.....'/> </Link>
+        <Link className='cart' to="/cart">< FaCartPlus /></Link>
+      </div>
+      <div className='second'>
+         <ul className='navlinks'>
+          <Link className='links' to="/">
+          <li >
+            Home
+          </li>
+          </Link>
+          <Link  className='links' to="/products">
+          <li>
+            Shop
+          </li>
+          </Link>
+          <Link className='links' to="/about">
+          <li>
+            About
+          </li>
+          </Link>
+          <Link className='links' to="/contact">
+          <li>
+            Contact
+          </li>
+          </Link>
+          
+          <Link className='links' to='/login'>
+          <li>
+            Login
+          </li>
+          </Link>
+          
+          </ul>
+         
+      </div>
+    </div>
+  )
+}
 
-export default Header;
+export default Header

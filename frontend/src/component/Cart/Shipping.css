@@ -54,17 +54,22 @@
   outline: none;
 }
 
+.input{
+  size: 100px;
+}
+
+
 .shippingForm > div > svg {
   position: absolute;
   transform: translateX(1vmax);
   font-size: 1.6vmax;
-  color: rgba(0, 0, 0, 0.623);
+  color: rgba(227, 74, 74, 0.623);
 }
 
 .shippingBtn {
   border: none;
   background-color: tomato;
-  color: white;
+  color: rgb(220, 25, 25);
   font: 300 1vmax "Roboto";
   width: 100%;
   padding: 1vmax;
@@ -74,11 +79,16 @@
   margin: 2vmax;
 }
 
+
+
 .shippingBtn:hover {
-  background-color: rgb(179, 66, 46);
+  background-color: rgb(191, 67, 45);
 }
 
 @media screen and (max-width: 600px) {
+  .shippingContainer{
+    margin-bottom: px;
+  }
   .shippingBox {
     width: 100vw;
     height: 95vh;
@@ -107,5 +117,41 @@
   .shippingBtn {
     font: 300 4vw "Roboto";
     padding: 4vw;
+  }
+}
+
+@media screen and (max-width: 590px){
+  .shippingForm > div{
+    
+    text-align: center;
+  }
+  .shippingForm {
+   margin-top: 250px;
+    height: 40px;
+  }
+
+  .shippingBox {
+   height: 750px;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .shippingForm > div{
+    margin-top: 30px;
+    height: 50px;
+    text-align: center;
+  }
+  .shippingForm {
+    margin-top: 200px;
+    height: 40px;
+  }
+
+  .shippingBox {
+    padding-top: 30px;
+  }
+  .shippingBtn {
+    font: 300 4vw "Roboto";
+    padding: 4vw;
+    margin-top: 50px;
   }
 }

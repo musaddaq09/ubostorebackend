@@ -28,7 +28,7 @@ const Shipping = ({ history }) => {
   const shippingSubmit = (e) => {
     e.preventDefault();
 
-    if (phoneNo.length < 10 || phoneNo.length > 10) {
+    if (phoneNo.length < 11 || phoneNo.length > 11) {
       alert.error("Phone Number should be 10 digits Long");
       return;
     }
@@ -56,6 +56,7 @@ const Shipping = ({ history }) => {
             <div>
               <HomeIcon />
               <input
+                className="input"
                 type="text"
                 placeholder="Address"
                 required
@@ -67,6 +68,7 @@ const Shipping = ({ history }) => {
             <div>
               <LocationCityIcon />
               <input
+               className="input" 
                 type="text"
                 placeholder="City"
                 required
@@ -78,6 +80,7 @@ const Shipping = ({ history }) => {
             <div>
               <PinDropIcon />
               <input
+                className="input"
                 type="number"
                 placeholder="Pin Code"
                 required
@@ -89,6 +92,7 @@ const Shipping = ({ history }) => {
             <div>
               <PhoneIcon />
               <input
+                className="input"
                 type="number"
                 placeholder="Phone Number"
                 required
@@ -102,11 +106,12 @@ const Shipping = ({ history }) => {
               <PublicIcon />
 
               <select
+                
                 required
                 value={country}
                 onChange={(e) => setCountry(e.target.value)}
               >
-                <option value="">Country</option>
+                <option value="" className="input">Country</option>
                 {Country &&
                   Country.getAllCountries().map((item) => (
                     <option key={item.isoCode} value={item.isoCode}>
@@ -125,7 +130,7 @@ const Shipping = ({ history }) => {
                   value={state}
                   onChange={(e) => setState(e.target.value)}
                 >
-                  <option value="">State</option>
+                  <option value="" className="input">State</option>
                   {State &&
                     State.getStatesOfCountry(country).map((item) => (
                       <option key={item.isoCode} value={item.isoCode}>
